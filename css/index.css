@@ -1,0 +1,135 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    max-width: 100vw;
+    min-height: 100vh;
+    overflow: hidden;
+    position: relative;
+}
+
+.main-div nav img{
+    width: 100px;
+}
+
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 30px 6%;
+    z-index: 1;
+}
+
+.nav-items{
+    display: flex;
+}
+
+.nav-item{
+    margin: 0 20px;
+    color: #3E4794;;
+    font-family: 'Roboto', sans-serif;
+}
+
+.signin-btn{
+    font-family: 'Roboto', sans-serif;
+    color: #fff;
+    border: none;
+    padding: 5px 20px;
+    border-radius: 15px;
+    z-index: 1;
+    background: linear-gradient(to right, #965CF2 , #FF8ADC);
+}
+
+.intro-section{
+    display: flex;
+}
+
+.left-section{
+    width: 23vw;
+    padding-left: 80px;
+}
+
+.left-section h1{
+    margin-top: 100px;
+    font-size: 55px;
+    color: #3E4794;
+    font-family: 'Roboto', sans-serif;
+}
+
+.left-section h4{
+    font-weight: 100;
+    font-family: 'Roboto', sans-serif;
+    font-size: 15px;
+    margin: 50px 0;
+    color: #3E4794;
+}
+
+.learn-more-btn{
+    background: linear-gradient(to right, #965CF2 , #FF8ADC);
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 20px;
+    font-size: 18px;
+}
+
+.main-div::before{
+    content: '';
+    background: url(../images/backcover.svg) no-repeat right top;
+    position: absolute;
+    right: -30px;
+    width: 53vw;
+    height: 100vh;
+    top: -150px;
+    z-index: -1;
+    transform: rotate(-12deg);
+    border-radius: 120px;
+}
+
+.intro-img img{
+    width: 548px;
+    position: absolute;
+    top: 55px;
+    right: 200px;
+}
+
+.vector-img{
+    position: absolute;
+    bottom: 100px;
+    left: 550px;
+}
+
+.vector-dot{
+    position: absolute;
+    bottom: 180px;
+    left: 600px;
+}
+
+@media screen and (max-width: 980px){
+
+    .main-div::before{
+        display: none;
+    }
+
+    .nav-item{
+        display: none;
+    }
+
+    .intro-section{
+        flex-direction: column-reverse;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .vector-dot, .vector-img{
+        display: none;
+    }
+
+    .intro-img img{
+        width: 200px;
+        position: relative;   
+        left: 10px;     
+    }
+}
